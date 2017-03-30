@@ -1,8 +1,20 @@
+// the-ajaxson-5 requirements:
+1. Define var searchQuery that gets the input text from the DOM (e.g. "dance")
+2. Configure the tag property of the params object (e.g. "jackson 5 dance")
+3. Configure the URL property of the ajax object (i.e. "where should this request be sent?")
 
 
+
+// TODO 
+	// 1. set the source attribute of our image to the image_url of the GIF
+	// 2. hide the feedback message and display the image
+// TODO 2
+	// give the user a "Loading..." message while they wait
+	
 $(document).ready(function() {
     // register our function as the "callback" to be triggered by the form's submission event
-    $("#form-gif-request").submit(fetchAndDisplayGif); // in other words, when the form is submitted, fetchAndDisplayGif() will be executed
+    $("#form-gif-request").submit(fetchAndDisplayGif); 
+    // in other words, when the form is submitted, fetchAndDisplayGif() will be executed
 });
 
 
@@ -19,7 +31,7 @@ function fetchAndDisplayGif(event) {
     event.preventDefault();
     
     // get the user's input text from the DOM
-    var searchQuery = ""; // TODO should be e.g. "dance"
+    var searchQuery = $('#form-gif-request').val(); // TODO should be e.g. "dance"
 
     // configure a few parameters to attach to our request
     var params = { 
