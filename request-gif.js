@@ -1,15 +1,11 @@
 // the-ajaxson-5 requirements:
-1. Define var searchQuery that gets the input text from the DOM (e.g. "dance")
-2. Configure the tag property of the params object (e.g. "jackson 5 dance")
-3. Configure the URL property of the ajax object (i.e. "where should this request be sent?")
-
-
-
-// TODO 
-	// 1. set the source attribute of our image to the image_url of the GIF
-	// 2. hide the feedback message and display the image
-// TODO 2
-	// give the user a "Loading..." message while they wait
+// 1. Define var searchQuery that gets the input text from the DOM (e.g. "dance")
+// 2. Configure the tag property of the params object (e.g. "jackson 5 dance")
+// 3. Configure the URL property of the ajax object (i.e. "where should this request be sent?")
+// 4  Still inside the ajax object, and within the success fx, 
+// 	a) set the source attribute of our image to the image_url of the GIF
+// 	b) hide the feedback message and display the image
+// 5. Give the user a "Loading..." message while they wait
 	
 $(document).ready(function() {
     // register our function as the "callback" to be triggered by the form's submission event
@@ -36,12 +32,12 @@ function fetchAndDisplayGif(event) {
     // configure a few parameters to attach to our request
     var params = { 
         api_key: "dc6zaTOxFJmzC", 
-        tag : "" // TODO should be e.g. "jackson 5 dance"
+        tag : "jackson, 5" // TODO should be e.g. "jackson 5 dance"
     };
     
     // make an ajax request for a random GIF
     $.ajax({
-        url: "", // TODO where should this request be sent?
+        url: "https://api.giphy.com/v1/gifs/random", // TODO where should this request be sent?
         data: params, // attach those extra parameters onto the request
         success: function(response) {
             // if the response comes back successfully, the code in here will execute.
