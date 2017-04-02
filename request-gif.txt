@@ -1,3 +1,6 @@
+(HTML code starts on line 94)
+REQUEST-GIF.JS Code
+
 // the-ajaxson-5 requirements:
 // 1. Define var searchQuery that gets the input text from the DOM (e.g. "dance")
 // 2. Configure the tag property of the params object (e.g. "jackson 5 dance")
@@ -86,3 +89,30 @@ function validate(event){
 		setGifLoadedStatus(false);
 	}
 }
+
+
+INDEX.HTML code
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The AJAXson 5</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+</head>
+<body>
+    <h1>The AJAXson 5</h1>
+
+    <form id="form-gif-request">
+        <label>What kind of Jackson 5 related gif do you want?</label>
+        <input id="searchQuery" name="tag" type="text"/>
+        <label>Prove you're not a robot!</label>
+        <input id="robotQuery" name="captcha" type="text"/>
+        <input type="submit" value="Get my Gif!"/>
+	</form>
+    <img id="gif" src="" hidden="true"/>
+    <p id="feedback" hidden="true`"></p>
+    
+<script type="text/javascript" src="request-gif.js"></script>
+</body>
+</html>

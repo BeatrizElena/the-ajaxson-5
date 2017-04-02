@@ -1,0 +1,25 @@
+/* <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> */
+
+  
+
+  h1 {
+    font-family: Lobster, Monospace;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    font-weight:bold;
+    margin-top:10px;
+    background:#FFB6E6;
+  }
+
+.jumbotron {
+	font-family: Lobster, Monospace;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    font-weight:bold;
+    margin-top:10px;
+    background:#FFB6E6;
+}
+
+  
